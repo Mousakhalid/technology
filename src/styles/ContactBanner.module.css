@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap");
+.bg {
+  background-image: url("/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 75vh;
+  background-position: center;
+  padding-top: 4rem;
+}
