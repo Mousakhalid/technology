@@ -57,7 +57,7 @@ const Contactform = () => {
                                 </div>
                                 <div>
                                     <label htmlFor="">Message</label>
-                                    <textarea placeholder='Your Message' name='message' rows='4' className='ring-1
+                                    <textarea placeholder='Your Message' name='message'  className='ring-1
                                      ring-gray-300 w-full mt-2 rounded-md px-4 py-2 outline-none
                                       focus:ring-2 focus:ring-teal-300' ></textarea>
                                 </div>
