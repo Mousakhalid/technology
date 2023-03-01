@@ -42,7 +42,7 @@ const Portfolio = () => {
   return (
     <>
       <div className='font-extrabold text-4xl text-black m-10  items-center text-center'>Our Portfolio</div>
-      <div className="app__work-filter flex  text-center items-center md:ml-72 ">
+      <div className="flex app__work-filter   text-center items-center md:ml-72 ">
         {['All', 'MERN', "AWS", 'Mobile App', 'Next JS', 'React JS', 'WordPress',].map((item, index) => (
           <div
             key={index}
