@@ -21,7 +21,7 @@ const Footer = () => {
             '>
                 <span>©2023 Technolgy Solutions. All Rights Reserved</span>
                 <span>Terms      .        Privacy Policy</span>
-                <SocialIcons Icons={Icons} />
+                <SocialIcons />
             </div>
         </footer>
     )
