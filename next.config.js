@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
+  compilerOptions: {
+    skipDefaultLibCheck: true,
+  },
   eslint: {
     ignoreDuringBuilds: true,
     typescript: {
@@ -10,31 +13,32 @@ const nextConfig = {
       // !! WARN !!
       ignoreBuildErrors: true,
     },
-
-    webpack: (config, { isServer }) => {
-      if (!isServer) {
-        config.node = {
-          fs: "empty",
-        };
-      }
-
-      config.module.rules.push({
-        test: /\.scss$/,
-        use: [
-          {
-            loader: "sass-loader",
-            options: {
-              sassOptions: {
-                includePaths: ["./styles"],
-              },
-            },
-          },
-        ],
-      });
-
-      return config;
-    },
   },
 };
 
+module.exports = {
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.node = {
+        fs: "empty",
+      };
+    }
+
+    config.module.rules.push({
+      test: /\.scss$/,
+      use: [
+        {
+          loader: "sass-loader",
+          options: {
+            sassOptions: {
+              includePaths: ["./styles"],
+            },
+          },
+        },
+      ],
+    });
+
+    return config;
+  },
+};
 module.exports = nextConfig;
